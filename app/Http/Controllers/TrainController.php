@@ -12,6 +12,7 @@ class TrainController extends Controller
     {
         $today = Carbon::today();
         $trains = Train::whereDate('data_di_partenza', $today)->get();
+        // $trains = Train::all();
 
         return view('trains', compact('trains'));
     }
